@@ -1,8 +1,6 @@
-# kubon
-new project
+# kubon Project
 
-
-r## SETUP
+## SETUP
 1. run `npm install` to install all dependencies
 2. run `npm run build` to archive project
 3. run `npm start` to start project for dev env
