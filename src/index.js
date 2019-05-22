@@ -1,14 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Route, Link, BrowserRouter as Router } from "react-router-dom";
+import { Route, Link, BrowserRouter as Router, Switch } from "react-router-dom";
 
 import App from "./components/init/App.js";
 
 import Users from "./components/users/users.js";
+import userDetails from "./components/users/user_details.js";
 import Contact from "./components/contact/contact.js";
 
+import Notfound from "./components/pages/notfound.js";
+
 const routing = (
-    <Router>
+  <Router>
     <div>
       <ul>
         <li>
@@ -21,9 +24,13 @@ const routing = (
           <Link to="/contact">Contact</Link>
         </li>
       </ul>
-      <Route exact path="/" component={App} />
-      <Route path="/users" component={Users} />
-      <Route path="/contact" component={Contact} />
+      <Switch>
+        <Route exact path="/" component={App} />
+        <Route path="/users" component={Users} />
+        <Route path="/user/:id" component={userDetails} />
+        <Route path="/contact" component={Contact} />
+        <Route component={Notfound} />
+      </Switch>
     </div>
   </Router>
 );
