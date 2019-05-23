@@ -23,9 +23,9 @@ class userDetails extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
         <h1>Users</h1>
-        <button onClick={() => this.checkData(this.state.dataId)}>Check Data</button>
+        <button className="btn btn-primary" onClick={() => this.checkData(this.state.dataId)}>Check Data</button>
       </div>
     );
   }

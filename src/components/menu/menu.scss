@@ -1,0 +1,78 @@
+#kubon-nav-menu {
+    .row {
+        .kubon-logo {
+            div {
+                margin: 14px 0;
+
+                .img-responsive {
+                    width: 160px;
+                    height: 30px;
+                }
+            }
+        }
+
+        .search-form {
+            #input_search_header {
+                border: 1px solid #ececec;
+                border-radius: 2px;
+                padding: 8px;
+                margin: 14px 0;
+                font-size: 12px;
+
+                &:focus {
+                    border: 1px solid #f26422; 
+                    transition: all 0.16s ease-in-out;
+                }
+            }
+
+            button {
+                width: 35px;
+                position: absolute;
+                top: 15px;
+                right: -20px;
+
+                svg {
+                    width: 20px;
+                }
+            }
+        }
+
+        .menu-wrapper {
+            ul {
+                display: inline-flex;
+                margin: 20px 0;
+
+                position: absolute;
+                right: 0;
+                
+                li {
+                    display: flex;
+                    margin: 0 3px;
+
+                    a {
+                        color: #404040;
+                        font-size: 14px;
+                        font-weight: 600;
+                        padding: 0 4px;
+                        text-decoration: none;
+
+                        transition: all 0.16s ease-in-out;
+
+                        &:hover {
+                            border-bottom: 2px solid #f26422; 
+                            transition: all 0.16s ease-in-out;
+                        }
+
+                      
+                    }
+
+                    // &:first-child {
+                    //     &:after {
+                    //         content: "\e90d";
+                    //     }
+                    // }
+                }
+            }
+        }
+    }
+}

@@ -1,31 +1,23 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Route, Link, BrowserRouter as Router, Switch } from "react-router-dom";
+import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 
-import App from "./components/init/App.js";
+import Menu from './components/menu/menu.js'
 
-import Users from "./components/users/users.js";
-import userDetails from "./components/users/user_details.js";
-import Contact from "./components/contact/contact.js";
+import Home from './components/home/home.js';
 
-import Notfound from "./components/pages/notfound.js";
+import Users from './components/users/users.js';
+import userDetails from './components/users/user_details.js';
+import Contact from './components/contact/contact.js';
+
+import Notfound from './components/pages/notfound.js';
 
 const routing = (
   <Router>
-    <div>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/users">Users</Link>
-        </li>
-        <li>
-          <Link to="/contact">Contact</Link>
-        </li>
-      </ul>
+    <Menu />
+    <div className="container">
       <Switch>
-        <Route exact path="/" component={App} />
+        <Route exact path="/" component={Home} />
         <Route path="/users" component={Users} />
         <Route path="/user/:id" component={userDetails} />
         <Route path="/contact" component={Contact} />

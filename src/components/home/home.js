@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 
-import './App.scss';
+import './home.scss';
 
-class App extends Component {
+class Home extends Component {
     render() {
         return (
-            <div>
+            <div className="container">
                 <h1>Kubon.vn</h1>
             </div>
         );
     }
 }
 
-export default App;
+export default Home;
